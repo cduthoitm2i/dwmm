@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Hello from './components/Hello'
 import Identity from "./components/Identity";
+import Time from "./components/Time";
+import Use from "./components/Use";
 
 export default function App() {
     // On crée une constante avec une string. On l'appele ensuite avec la syntaxe {dwwm}
@@ -25,11 +27,17 @@ export default function App() {
                 <br/>
                 {/* Appel de la constante dwwm */}
                 {/*dwwm*/}
+                {/* Appel de la fonction Hello (la cap est importante afin de différencier avec une balise HTML) */}
                 <Hello />
-                {/* Appel des props de identity.jsx */}
+
+                {/* Appel de la fonction Time */}
+                <Time date={new Date()}/>
+
+                {/* Appel des props de Identity.jsx */}
                 <Identity name={'Christophe'}
                           bio={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, suscipit pariatur, dolor impedit saepe eum magni quaerat nesciunt ullam ratione modi! Cumque saepe a tempore alias facilis! Id, quam voluptate'}
                           />
+                <Use />
             </header>
         </div>
     );
